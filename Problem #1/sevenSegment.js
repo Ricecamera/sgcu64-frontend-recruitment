@@ -38,7 +38,20 @@ const convertToDigit = (time) => {
 }
 
 const updateTime = (time) => {
+    time[2]--;
 
+    if(time[2] < 0) {
+        time[1]--;
+        time[2] = 59;
+        if(time[1] < 0) {
+            time[0]--;
+            time[1] = 59;
+        }
+    }
+}
+
+const reachZero = (time) => {
+    return (time[0] === 0 && time[1] === 0 && time[2] === 0);
 }
 
 const makeSevenSeg = (number) => {
@@ -188,6 +201,7 @@ module.exports = {
     receiveUserInput,
     convertToDigit,
     updateTime,
+    reachZero,
     makeSevenSeg,
     displayNone,
     displaySevenSeg
