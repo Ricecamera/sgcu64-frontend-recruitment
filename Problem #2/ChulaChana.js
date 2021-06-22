@@ -25,3 +25,12 @@ const displayPopulation = (populationData) => {
 const saveData = (userList, populationData) => {
 
 }
+
+module.exports = {
+    getPopulation,
+    getUserList,
+    checkIn,
+    checkOut,
+    displayPopulation,
+    saveData
+}

@@ -7,8 +7,8 @@ console.log("Available commands:\n", " 1.Check in user\n", " 2.Check out user\n"
     " 3.Show population\n", " 4.quit");
 
 // Load data into memory
-const userList = cc.getUserList();
-const populationData = cc.getPopulation();
+/*const userList = CC.getUserList();
+const populationData = CC.getPopulation();*/
 
 let finish = false; // for exit the program
 do {
@@ -31,5 +31,5 @@ do {
 
 } while(!finish);
 
-cc.saveData(userList, populationData);
+CC.saveData(userList, populationData);
 console.log("closing program....");
