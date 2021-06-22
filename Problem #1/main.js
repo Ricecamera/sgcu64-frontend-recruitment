@@ -4,19 +4,43 @@
 // ถ้าข้อมูลที่รับเข้ามาถูกต้อง จะเริ่มนับถอยหลังเวลา แล้วค่อยจบโปรแกรม
 // update การแสดงผล seven segment
 
+const prompt = require('prompt-sync')({ sigint: true });
+
 const receiveUserInput = (userInput) => {
-    //receive input from keyboard
+    const regx = /^\d+:\d+:\d+$/;
 
-    //devide input into 3 parts
+    const inputText = prompt('input: '); // receive input from keyboard
 
-    //verify user's intput 1.check format 2.check minute and second value
+    // verify user's intput pattern  
+    if(regx.test(inputText) && isValid) {
+        let inputArr = inputText.split(':');
+        // check if minute and second are in valid range
+        const isValid = (Number(inputArr[1]) < 60) && (Number(inputArr[2]) < 60);
+        if(isValid) {
+            // store input into userInput 
+            for(let i = 0; i < 3; i++) {
+                userInput[i] = Number(inputArr[i]);
+            }
+            return true; // correct format return true
+        }
+    }
 
-    //store input into userInput 
-    return false; //correct format return true
+    for(let i = 0; i < 3; i++) {
+        userInput[i] = 0;
+    }
+    return false; // wrong format return false and 00:00:00
 }
 
 const convertToDigit = (time) => {
-    //Ex. 60 => [6, 0], 7 => [0, 7]
+    // Ex. 60 => [6, 0], 7 => [0, 7]
+    let digitArray = new Array();
+    for(let num of time) {
+        const digit = Math.floor(num / 10);
+        digitArray.push(digit);
+        num -= digit * 10;
+        digitArray.push(num);
+    }
+    return digitArray;
 }
 
 const makeSevenSeg = (number) => {
@@ -53,7 +77,8 @@ const displaySevenSeg = (digitArray) => {
 }
 
 const displayNone = () => {
-
+    console.log('\n          ·           ·');
+    console.log(' __   __  ·  __   __  ·  __  __');
 }
 
 const updateTime = (time) => {
@@ -61,26 +86,17 @@ const updateTime = (time) => {
 }
 
 const main = () => {
-    let startTime = new Array[3];
+    let startTime = new Array(3);
 
     const response = receiveUserInput(startTime);
-
     if(response) {
-        //To do: ตรงนี้น่าจะเปลี่ยนไปใช้ build-in timer
-        //lasttime = getCurrentTime()
-        do {
-            //get currentTime = getCurrentTime()
-            //if (currentTime - lastTime = 1 second)-> do code below
-            const digitArray = convertToDigit(startTime);
-            displaySevenSeg(digitArray);
-            updateTime(userInput);
-
-        } while(!reachZero(userInput));
-
-        const zeroArr = new Array[6].fill(0);
-        displaySevenSeg(zeroArr);
+        const digitArray = convertToDigit(startTime);
+        console.log(digitArray);
+        //displaySevenSeg(digitArray);
     }
     else {
         displayNone();
     }
 }
+
+main();
