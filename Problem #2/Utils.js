@@ -2,7 +2,6 @@ const prompt = require('prompt-sync')({ sigint: true });
 const fs = require("fs");
 const csv = require('csv-parser');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-const { resourceLimits } = require('worker_threads');
 
 const receiveInputText = (inputPrompt) => {
     const inputText = prompt(inputPrompt);
@@ -11,12 +10,12 @@ const receiveInputText = (inputPrompt) => {
 
 const receiveInputNumber = (inputPrompt, maxNum) => {
     let input;
-    let fail = false;
+    let fail;
     do {
+        fail = false;
         input = prompt(inputPrompt);
-        console.log('-----------------------------------------------------------------');
 
-        if(!isNaN(input) && (Number(input) >= 0 && Number(input) <= maxNum)) {
+        if(!isNaN(input) && (Number(input) > 0 && Number(input) <= maxNum)) {
             input = Number(input);
         }
         else {
@@ -30,11 +29,14 @@ const receiveInputNumber = (inputPrompt, maxNum) => {
 
 const readCSVfile = (filePath) => {
     let result = [];
-    fs.createReadStream(filePath).pipe(csv({ headers: true }))
-        .on('data', (data) => results.push(data))
-        .on('end', () => {
-            return results;
-        })
+    return new Promise((resolve, reject) => {
+        fs.createReadStream(filePath).pipe(csv({ headers: true }))
+            .on('data', (data) => result.push(data))
+            .on('end', () => {
+                resolve(result);
+            })
+            .on('error', reject)
+    });
 }
 
 const writeCSVfile = (filePath, data, fileHeader) => {
