@@ -1,4 +1,8 @@
 const prompt = require('prompt-sync')({ sigint: true });
+const fs = require("fs");
+const csv = require('csv-parser');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const { resourceLimits } = require('worker_threads');
 
 const receiveInputText = (inputPrompt) => {
     const inputText = prompt(inputPrompt);
@@ -24,7 +28,26 @@ const receiveInputNumber = (inputPrompt, maxNum) => {
     return input;
 }
 
+const readCSVfile = (filePath) => {
+    let result = [];
+    fs.createReadStream(filePath).pipe(csv({ headers: true }))
+        .on('data', (data) => results.push(data))
+        .on('end', () => {
+            return results;
+        })
+}
+
+const writeCSVfile = (filePath, data, fileHeader) => {
+    const csvWriter = createCsvWriter({
+        path: filePath,
+        header: fileHeader
+    });
+    csvWriter.writeRecords(data);
+}
+
 module.exports = {
     receiveInputText,
-    receiveInputNumber
+    receiveInputNumber,
+    readCSVfile,
+    writeCSVfile
 }
