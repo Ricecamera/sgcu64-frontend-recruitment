@@ -3,12 +3,12 @@ const CC = require('./ChulaChana');
 
 // Prompt to user
 console.log("Welcome to Chula Chana!!!");
-console.log("Available commands:\n", " 1.Check in user\n", " 2.Check out user\n",
-    " 3.Show population\n", " 4.quit");
+console.log("Available commands:\n", "  1.Check in user\n", "  2.Check out user\n",
+    "  3.Show population\n", "  4.quit");
 
 // Load data into memory
-/*const userList = CC.getUserList();
-const populationData = CC.getPopulation();*/
+let users = CC.getUsers();
+let populationData = CC.getPopulation();
 
 let finish = false; // for exit the program
 do {
@@ -16,13 +16,13 @@ do {
 
     switch(userInput) {
         case 1:
-            CC.checkIn(userList, populationData);
+            CC.checkIn(users, populationData);
             break;
         case 2:
-            CC.checkOut(userList, populationData);
+            CC.checkOut(users, populationData);
             break;
         case 3:
-            displayPopulation(populationData);
+            CC.displayPopulation(populationData);
             break;
         case 4:
             finish = true;
@@ -31,5 +31,5 @@ do {
 
 } while(!finish);
 
-CC.saveData(userList, populationData);
+CC.saveData(users, populationData);
 console.log("closing program....");
