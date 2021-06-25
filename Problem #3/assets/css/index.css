@@ -27,7 +27,13 @@ body {
 
 .register-card {
   /* USER CODE Begin: Style the card */
-
+  background-color: white;
+  border-radius: 10px;
+  margin: 86px 25px 88px 28px;
+  padding: 36px 40px 41px 41px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+  width: 300px;
+  height: 600px;
   /* USER CODE End: Style the card */
 }
 
@@ -49,7 +55,11 @@ body {
 
 input {
   /* USER CODE Begin: Style the input field */
-
+  opacity: 0.4;
+  border-radius: 5px;
+  margin-bottom: 31px;
+  min-width: 250px;
+  height: 32px;
   /* USER CODE END: Style the input field */
 }
 
@@ -64,7 +74,12 @@ input:focus {
 
 button {
   /* USER CODE Begin: Style the button */
-
+  background-color: var(--chula-pink);
+  color: white;
+  border-width: 0px;
+  border-radius: 5px;
+  min-width: 250px;
+  height: 32px;
   /* USER CODE END: Style the button */
 }
 
@@ -76,7 +91,7 @@ button:hover {
 .cloud,
 .footer {
   /* USER CODE Begin: Hide it */
-
+  display: none;
   /* USER CODE END: Hide it  */
 }
 
@@ -87,7 +102,7 @@ button:hover {
 }
 
 /* USER CODE Begin: Manage screen width */
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 1024px) {
   /* USER CODE END: Manage screen width */
   body {
     background: url("../img/bg-desktop.svg");
@@ -112,41 +127,52 @@ button:hover {
 
   .kite {
     /* USER CODE Begin: Control kite */
-
+    display: inline;
+    margin: 123px 60px 88px 150px;
+    width: 512px;
+    height: 512px;
     /* USER CODE END: Control kite */
   }
 
   .cloud {
     /* USER CODE Begin: Style cloud */
-
+    display: initial;
+    position: absolute;
+    z-index: -1;
     /* USER CODE END: Style kite */
   }
 
   .cloud.cloud1 {
     /* USER CODE Begin: Control cloud1 */
-
+    
+    top: 132px;
+    left: 47px;
     /* USER CODE END: Control cloud1 */
   }
 
   .cloud.cloud2 {
     /* USER CODE Begin: Control cloud2 */
-
+    top: 322px;
+    left: 460px;
     /* USER CODE END: Control cloud2 */
   }
 
   .cloud.cloud3 {
     /* USER CODE Begin: Control cloud3*/
-
+    top: 520px;
+    left: 47px;
     /* USER CODE END: Control cloud3 */
   }
 
   input {
     /* USER CODE Begin: Style the input field */
-
+    
     /* USER CODE END: Style the input field */
   }
 
   #register-form {
+    display: flex;
+    flex-direction: column;
     margin-top: 40px;
     padding-bottom: 20px;
   }
