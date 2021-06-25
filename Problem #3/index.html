@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <title>ISD SGCU</title>
-  </head>
-  <body>
-    <div class="topbar">
-      <img class="logo" src="assets/img/sgcu-logo.svg" />
-      ISD SGCU
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <title>ISD SGCU</title>
+</head>
+
+<body>
+  <div class="topbar">
+    <img class="logo" src="assets/img/sgcu-logo.svg" />
+    ISD SGCU
+  </div>
+  <div class="content">
+    <!-- USER CODE BEGIN: Control image -->
+    <img class="kite" src="assets/img/kite.png" />
+    <img class="cloud cloud1" src="assets/img/cloud1.png" />
+    <img class="cloud cloud2" src="assets/img/cloud2.png" />
+    <img class="cloud cloud3" src="assets/img/cloud3.png" />
+    <!-- USER CODE BEGIN: Control image -->
+    <div class="register-card">
+      <h1 class="title">ลงทะเบียน</h1>
+      <p class="subtitle">กรุณากรอกข้อมูลให้ครบถ้วน</p>
+      <form id="register-form">
+        <input name="name" placeholder="ชื่อ" />
+        <input name="lastname" placeholder="นามสกุล" />
+        <input name="username" placeholder="ชื่อผู้ใช้" />
+        <input name="email" type="email" placeholder="อีเมล" />
+        <input name="password" type="password" placeholder="รหัสผ่าน" />
+        <input name="confirmpassword" type="password" placeholder="ยืนยันรหัสผ่าน" />
+        <button type="submit">Submit</button>
+      </form>
     </div>
-    <div class="content">
-      <!-- USER CODE BEGIN: Control image -->
-      <img class="kite" />
-      <img class="cloud cloud1" />
-      <img class="cloud cloud2" />
-      <img class="cloud cloud3" />
-      <!-- USER CODE BEGIN: Control image -->
-      <div class="register-card">
-        <h1 class="title">ลงทะเบียน</h1>
-        <p class="subtitle">กรุณากรอกข้อมูลให้ครบถ้วน</p>
-        <form id="register-form">
-          <input name="name" placeholder="ชื่อ" />
-          <input name="lastname" placeholder="นามสกุล" />
-          <input name="username" placeholder="ชื่อผู้ใช้" />
-          <input name="email" type="email" placeholder="อีเมล" />
-          <input name="password" type="password" placeholder="รหัสผ่าน" />
-          <input name="confirmpassword" type="password" placeholder="ยืนยันรหัสผ่าน" />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-    <div class="footer">
-      <!-- USER CODE BEGIN: Navigate social media -->
-      <a><img class="contact-logo" src="assets/img/ig-logo.svg" /></a>
-      <a><img class="contact-logo" src="assets/img/fb-logo.svg" /></a>
-      <a><img class="contact-logo" src="assets/img/twitter-logo.svg" /></a>
-      <!-- USER CODE END: Navigate social media -->
-    </div>
-  </body>
-  <script src="script/index.js" type="text/javascript"></script>
+  </div>
+  <div class="footer">
+    <!-- USER CODE BEGIN: Navigate social media -->
+    <a><img class="contact-logo" src="assets/img/ig-logo.svg" /></a>
+    <a><img class="contact-logo" src="assets/img/fb-logo.svg" /></a>
+    <a><img class="contact-logo" src="assets/img/twitter-logo.svg" /></a>
+    <!-- USER CODE END: Navigate social media -->
+  </div>
+</body>
+<script src="script/index.js" type="text/javascript"></script>
+
 </html>
