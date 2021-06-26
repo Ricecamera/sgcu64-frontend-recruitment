@@ -71,3 +71,4 @@
 
 &emsp; # Assumption: เลขของส่วนชั่วโมงนั้น มีค่าไม่เกิน 2 หลัก<br />
 &emsp; # command ที่ใช้รัน: node main.js<br />
+&emsp; # module ที่ติดตั้งเพิ่มเติม: prompt-sync

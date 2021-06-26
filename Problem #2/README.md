@@ -97,4 +97,5 @@ Please input any number: 3
 
 # Applicant Section
 
-&emsp; # command ที่ใช้รัน: node main.js
+&emsp; # command ที่ใช้รัน: node main.js <br/>
+&emsp; # module ที่ติดตั้งเพิ่มเติม: prompt-sync, csv-parser, csv-writer
