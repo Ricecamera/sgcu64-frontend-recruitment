@@ -46,8 +46,7 @@
 
 # Applicant Section
 
-ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
-    # Addition Idea: ในไฟล์ idex.css ตรงส่วน 'register-form' นั้นเปลี่ยนให้เป็น display แบบ flex แนว colomn แทนเพราะว่า ต้องการให้ input form และ submit button เรียงกันถูกต้องทุกขนาด และจัดการเกี่ยวกับขนาดของ submit button ได้ง่าย
-    # Addition Idea: เพิ่ม text สีแดงข้างล่างช่องใส่ email และ comfirmpassword ให้ช่วยบอกว่า user กรอกข้อมูลถูกต้องหรือไหม และ จะเช็คด้วยว่า user กรอกฟอร์มครบทุกช่องไหม
-    # Addition Idea: เพิ่มเติมให้ register form แสดงข้อความบอกว่า ลงทะเบียนสำเร็จด้วย
-    # Addition Idea: เพิ่ม animation ให้กับรูปว่าวนิดหน่อย
+&emsp; # Addition Idea: ในไฟล์ idex.css ตรงส่วน 'register-form' นั้นเปลี่ยนให้เป็น display แบบ flex แนว colomn แทนเพราะว่า ต้องการให้ input form และ submit button เรียงกันถูกต้องทุกขนาด และจัดการเกี่ยวกับขนาดของ submit button ได้ง่าย<br />
+&emsp; # Addition Idea: เพิ่ม text สีแดงข้างล่างช่องใส่ email และ comfirmpassword ให้ช่วยบอกว่า user กรอกข้อมูลถูกต้องหรือไหม และ จะเช็คด้วยว่า user กรอกฟอร์มครบทุกช่องไหม<br />
+&emsp; # Addition Idea: เพิ่มเติมให้ register form แสดงข้อความบอกว่า ลงทะเบียนสำเร็จด้วย<br />
+&emsp; # Addition Idea: เพิ่ม animation ให้กับรูปว่าวนิดหน่อย<br />
