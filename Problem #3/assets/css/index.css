@@ -87,13 +87,13 @@ button:hover {
   background: var(--chula-pink-dark);
 }
 
-/* USER Addition */
+/* USER Addition: style the error text */
 #error-text {
   color: red;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/* USER Addition */
+/* USER Addition style the error text*/
 
 .kite,
 .cloud,
@@ -139,6 +139,11 @@ button:hover {
     margin: 123px 4% 88px 10%;
     width: 512px;
     height: 512px;
+
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     /* USER CODE END: Control kite */
   }
 
@@ -173,10 +178,10 @@ button:hover {
   }
 
   #register-form {
-    /* USER Addition */
+    /* USER Addition: align elements in column direction */
     display: flex;
     flex-direction: column;
-    /* USER Addition */
+    /* USER Addition align elements in column direction */
     margin-top: 40px;
     padding-bottom: 20px;
   }
@@ -196,3 +201,11 @@ button:hover {
     margin-right: 122px;
   }
 }
+
+/* USER Addition: Kite animation */
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, 0px); }    
+}
+/* USER Addition: Kite animation */
