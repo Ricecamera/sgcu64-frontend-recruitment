@@ -87,6 +87,14 @@ button:hover {
   background: var(--chula-pink-dark);
 }
 
+/* USER Addition */
+#error-text {
+  color: red;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/* USER Addition */
+
 .kite,
 .cloud,
 .footer {
@@ -128,7 +136,7 @@ button:hover {
   .kite {
     /* USER CODE Begin: Control kite */
     display: inline;
-    margin: 123px 60px 88px 150px;
+    margin: 123px 4% 88px 10%;
     width: 512px;
     height: 512px;
     /* USER CODE END: Control kite */
@@ -164,15 +172,11 @@ button:hover {
     /* USER CODE END: Control cloud3 */
   }
 
-  input {
-    /* USER CODE Begin: Style the input field */
-    
-    /* USER CODE END: Style the input field */
-  }
-
   #register-form {
+    /* USER Addition */
     display: flex;
     flex-direction: column;
+    /* USER Addition */
     margin-top: 40px;
     padding-bottom: 20px;
   }
